@@ -49,7 +49,7 @@
    License:
    - Copyrighted (c) by PACKT, 2025, under the MIT License.
    - See the code-repository's license-statement for more information:
-     - https://github.com/PacktPublishing/Hands-On-RTOS-with-Microcontrollers-2nd-edition
+     - https://github.com/PacktPublishing/Hands-On-RTOS-with-Microcontrollers-Second-Edition
  */
 
 static inline void delay_us(volatile uint32_t microSeconds)

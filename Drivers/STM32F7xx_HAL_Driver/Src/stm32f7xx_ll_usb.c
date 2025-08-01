@@ -41,7 +41,7 @@
 Copyright for changes made to this file, for the book "Hands-On RTOS with Microcontrollers", 2nd edition:
 - Copyright (c) 2025 Packt Publishing, under the MIT License.
 - See the code-repository's license statement for more information:
-  - https://github.com/PacktPublishing/Hands-On-RTOS-with-Microcontrollers-2nd-edition
+  - https://github.com/PacktPublishing/Hands-On-RTOS-with-Microcontrollers-Second-Edition
  */
 
 /* Includes ------------------------------------------------------------------*/
