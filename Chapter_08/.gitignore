@@ -1,0 +1,11 @@
+#
+# Project-specific rules
+#
+
+# Build directories
+/mutexExample/
+/polledExample/
+/semaphoreExample/
+/semaphorePriorityInversion/
+/semaphoreTimeBound/
+/softwareTimers/

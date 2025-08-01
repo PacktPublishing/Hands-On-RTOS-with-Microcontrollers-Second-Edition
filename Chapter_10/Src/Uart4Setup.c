@@ -1,0 +1,102 @@
+/**
+
+---------------------------------------------------------------------------------------
+
+Licenses:
+- Copyright (c) 2019-2025 Packt Publishing, under the MIT License.
+- Based on code copyrighted by Brian Amos, 2019, under the MIT License.
+- See the code-repository's license statement for more information:
+  - https://github.com/PacktPublishing/Hands-On-RTOS-with-Microcontrollers-2nd-edition
+
+ */
+
+#include <UartQuickDirtyInit.h>
+#include <stdint.h>
+#include <string.h>
+
+//static const uint8_t uart4Msg[] = "0123456789abcdefghijklmnopqrstuvwxyz";
+static const uint8_t uart4Msg[] = "data from uart4";
+static DMA_HandleTypeDef uart4DmaTx;
+
+static void uart4TxDmaStartRepeat( const uint8_t* Msg, uint16_t Len );
+static void uart4TxDmaSetup( void );
+
+/**
+ * Setup UART4 to repeatedly transmit a message
+ * via DMA (no CPU intervention required).  This simulates
+ * what would happen if there was data flowing from an
+ * external off-chip source and let's us concentrate on
+ * what's going on with UART2
+ *
+ * @param Baudrate desired baudrate for the UART4
+ *
+ * This is a quick and dirty setup. . .
+ */
+void SetupUart4ExternalSim( uint32_t BaudRate )
+{
+	//setup DMA
+	uart4TxDmaSetup();
+
+	//GPIO pins are setup in BSP/Nucleo_F767ZI_Init
+	STM_UartInit(UART4, BaudRate, &uart4DmaTx, NULL);
+
+	//also enable DMA for UART4 Transmits
+	UART4->CR3 |= USART_CR3_DMAT_Msk;
+
+	/**
+	 *	start the repeating DMA transfer.  Eventually, non-circular
+	 *	receivers will loose a character here or there at high baudrates.
+	 */
+	uart4TxDmaStartRepeat(uart4Msg, sizeof(uart4Msg));
+}
+
+static void uart4TxDmaSetup( void )
+{
+	__HAL_RCC_DMA1_CLK_ENABLE();
+	//no need to enable any interrupts
+	HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA1_Stream4_IRQn);
+
+	//initialize the DMA peripheral to transfer uart4Msg
+	//to UART4 repeatedly
+	memset(&uart4DmaTx, 0, sizeof(uart4DmaTx));
+	uart4DmaTx.Instance = DMA1_Stream4;
+	uart4DmaTx.Init.Channel = DMA_CHANNEL_4;			//channel 4 is for UART4 Tx
+	uart4DmaTx.Init.Direction = DMA_MEMORY_TO_PERIPH;	//transfering out of memory and into the peripheral register
+	uart4DmaTx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;	//no fifo
+	uart4DmaTx.Init.MemBurst = DMA_MBURST_SINGLE;		//transfer 1 at a time
+	uart4DmaTx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+	uart4DmaTx.Init.MemInc = DMA_MINC_ENABLE;			//increment 1 byte at a time
+	uart4DmaTx.Init.Mode = DMA_CIRCULAR;				//this will automatically restart the transfer at the beginning after it has finished
+	uart4DmaTx.Init.PeriphBurst = DMA_PBURST_SINGLE;	//write 1 at a time to the peripheral
+	uart4DmaTx.Init.PeriphInc = DMA_PINC_DISABLE;		//always keep the peripheral address the same (the Tx data register is always in the same location)
+	uart4DmaTx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
+	//we're setting low priority since this is meant to be simulated data - the DMA
+	//transfers of the active code should take priority
+	uart4DmaTx.Init.Priority = DMA_PRIORITY_VERY_HIGH;
+	assert_param(HAL_DMA_Init(&uart4DmaTx) == HAL_OK);
+	DMA1_Stream4->CR &= ~DMA_SxCR_EN;
+
+	//set the DMA transmit mode flag to enable DMA transfers
+	UART4->CR3 |= USART_CR3_DMAT_Msk;
+}
+
+/**
+ * starts a DMA transfer to the UART4 Tx register
+ * that will automatically repeat after it is finished
+ * @param Msg pointer to array to transfer
+ * @param Len number of elements in the array
+ */
+static void uart4TxDmaStartRepeat( const uint8_t* Msg, uint16_t Len )
+{
+	//clear the transfer complete flag to make sure our transfer starts
+	UART4->ICR |= USART_ICR_TCCF;
+	assert_param(HAL_DMA_Start(&uart4DmaTx, (uint32_t) Msg, (uint32_t)&(UART4->TDR), Len) == HAL_OK);
+}
+
+void DMA1_Stream4_IRQHandler(void)
+{
+	//shouldn't ever get here - interrupts are not enabled
+	while(1);
+//  HAL_DMA_IRQHandler(&hdma_uart4_tx);
+}

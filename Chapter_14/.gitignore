@@ -1,0 +1,8 @@
+#
+# Project-specific rules
+#
+
+# Build directories
+/Heap1_DeleteAttempt/
+/staticQueueCreation/
+/StaticTask_DeleteAttempt/

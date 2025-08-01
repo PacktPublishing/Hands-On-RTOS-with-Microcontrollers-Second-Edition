@@ -1,0 +1,69 @@
+#
+# .gitignore Patterns
+# * https://linuxize.com/post/gitignore-ignoring-files-in-git/
+# * Slashes (from link above)
+#   * "If the pattern ends with a slash, it matches only directories."
+#   * "If the pattern starts with a slash, it matches files and directories only in the repository root."
+# * Negating Patterns
+#   * "A pattern that starts with an exclamation mark (!) negates (re-include) any file that is ignored 
+#     by the previous pattern. The exception to this rule is to re-include a file if its parent directory 
+#     is excluded."
+
+#
+# Workspace rules
+# * For projects with multiple build-configurations, they have their own .gitignore file
+#
+
+# Folder with IDE configuration settings, for the workspace
+/.metadata/
+
+
+#
+# Project-level rules
+#
+
+# Debug and Release directories have build artifacts
+/Chapter_*/Debug/
+/Chapter_*/Release/
+/FreeRTOS_project/Debug/
+/FreeRTOS_project/Release/
+
+# This file records the files created for code generation.  
+# * Full-paths are specified, so the file isn't portable to other systems.
+/Chapter_*/.mxproject
+/FreeRTOS_project/.mxproject
+
+# Folder with IDE configuration settings, for the project
+# * Remove everything in .settings folder, except the file org.eclipse.core.resources.prefs
+# * That file has the text-encoding setting, which is needed to avoid build warnings.
+# 
+# * From: https://stackoverflow.com/questions/39450654/how-to-ignore-everything-in-a-directory-except-one-file
+!/Chapter_*/.settings/
+/Chapter_*/.settings/*
+!/Chapter_*/.settings/org.eclipse.core.resources.prefs
+
+!/FreeRTOS_project/.settings/
+/FreeRTOS_project/.settings/*
+!/FreeRTOS_project/.settings/org.eclipse.core.resources.prefs
+
+
+# Locally stored "Eclipse launch configurations"
+/Chapter_*/*.launch
+/FreeRTOS_project/*.launch
+
+# Ozone, config file
+/Chapter_*/*.jdebug
+/FreeRTOS_project/*.jdebug
+# Ozone, project user-file
+/Chapter_*/*.jdebug.user
+/FreeRTOS_project/*.jdebug.user
+
+# 
+# FYI, do not exclude these project-level files. They are benign or needed
+#
+# .cproject
+# .gitignore
+# .project
+# *.ioc
+# STM32F767Z*.icf
+# STM32F767Z*.ld

@@ -1,0 +1,9 @@
+#
+# Project-specific rules
+#
+
+# Build directories
+/directTaskNofications/
+/queueCompositePassByReference/
+/queueCompositePassByValue/
+/queueSimplePassByValue/

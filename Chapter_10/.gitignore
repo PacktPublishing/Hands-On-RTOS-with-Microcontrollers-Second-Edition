@@ -1,0 +1,8 @@
+#
+# Project-specific rules
+#
+
+# Build directories
+/uartInterruptBuffer/
+/uartInterruptQueue/
+/uartPolled/
