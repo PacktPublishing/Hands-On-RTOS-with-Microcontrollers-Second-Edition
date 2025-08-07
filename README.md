@@ -1,11 +1,13 @@
 # Hands-On RTOS with Microcontrollers, Second Edition
 <a href="https://www.packtpub.com/en-us/product/hands-on-rtos-with-microcontrollers-9781803243047"> <img src="https://content.packt.com/_/image/xxlarge/B18584/cover_image.jpg?version=1749107709" alt="Hands-On RTOS with Microcontrollers, Second Edition" itemprop="url" height="256px" align="right"></a>
 
-This is the code repository for the book *[Hands-On RTOS with Microcontrollers](https://www.packtpub.com/en-us/product/hands-on-rtos-with-microcontrollers-9781803243047), Second Edition*:
+This is the code repository for the book *Hands-On RTOS with Microcontrollers, Second Edition*:
 <br>
 *Create high-performance, real-time embedded systems using FreeRTOS, STM32 MCUs and SEGGER debug tools*
 
 The book is written by Jim Yuill and Penn Linder, and published by Packt.
+
+Book listings: [Amazon.com](https://www.amazon.com/Hands-RTOS-Microcontrollers-high-performance-real-time/dp/1803237724), [Packt (publisher)](https://www.packtpub.com/en-us/product/hands-on-rtos-with-microcontrollers-9781803243047)
 
 For the first edition of the book, [its repository is here](https://github.com/PacktPublishing/Hands-On-RTOS-with-Microcontrollers).
 
