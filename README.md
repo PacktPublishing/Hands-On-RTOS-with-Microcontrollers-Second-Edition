@@ -1,6 +1,6 @@
 <h1 align="center">
 Hands-On RTOS with Microcontrollers, Second Edition</h1>
-<p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/hands-on-rtos-with-microcontrollers-second-edition/9781803237725"> Hands-On RTOS with Microcontrollers, Second Edition</a>, published by Packt.
+<p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/hands-on-rtos-with-microcontrollers-9781803243047"> Hands-On RTOS with Microcontrollers, Second Edition</a>, published by Packt.
 </p>
 
 <h2 align="center">
@@ -22,14 +22,16 @@ Jim Yuill, Penn Linder</p>
 <details open> 
   <summary><h2>About the book</summary>
 <a href="https://www.packtpub.com/product/unity-cookbook-fifth-edition/9781805123026">
-<img src="https://content.packt.com/B18584/cover_image_small.jpg" alt="Unity Cookbook, Fifth Edition" height="256px" align="right">
+<img src="https://content.packt.com/B18584/cover_image_small.jpg"  height="256px" align="right">
 </a>
 
-This updated edition of Hands-On RTOS with Microcontrollers is packed with cutting-edge content to help you expand your skills and stay ahead of the curve with embedded systems development. Written by senior engineers with decades of experience in cybersecurity, operating systems (OSs), and embedded systems, it covers the role of real-time OSs in today’s time-critical applications and FreeRTOS with its key capabilities and APIs. You’ll find a detailed overview of system design (memory management), project design (MCU, IDE, and RTOS APIs), and hands-on system use as well as the system platform, dev-boards with an MCU and a debug probe, and development tools (IDE, build system, and source-code debugging).
+This updated edition of Hands-On RTOS with Microcontrollers is packed with cutting-edge content. It can help you expand your skills and stay ahead of the curve in embedded-systems development. It’s written by senior engineers with decades of experience in embedded systems and related technologies. The book covers the role of real-time OSs in today’s time-critical applications, and it covers FreeRTOS, including key capabilities and APIs. You’ll find a detailed overview of system design (FreeRTOS and its APIs, memory management);  hands-on system use; as well as the hardware platform (dev-board, MCU and debug-probe), and development tools (IDE, build system, and debugging tools).
+
 This second edition teaches you how to implement over 20 real-world embedded applications with the latest FreeRTOS features and how to optimize your code with dynamic analysis. The chapters include example programs on GitHub with detailed instructions. You’ll create and install your own FreeRTOS system on the dev-board and set up an IDE project with debugging tools. With dozens of reference manuals listed, you’ll always have ample resources for system development.
+
 By the end of this book, you’ll have the hands-on skills to design, build, and optimize embedded applications using FreeRTOS, dev-boards, and modern debugging tools.</details>
 <details open> 
-  <summary><h2>Key Learnings</summary>
+  <summary><h2>What you will learn</summary>
 <ul>
 
 <li>Understand RTOS use cases, and decide when (and when not) to use real-time OS</li>
@@ -100,13 +102,13 @@ By the end of this book, you’ll have the hands-on skills to design, build, and
 
 <details open> 
   <summary><h2>Requirements for this book</summary>
-To run the example-programs, an STM32 Nucleo-F767ZI dev-board is needed. In the future, if additional hardware is supported, it will be described in the book’s GitHub repository: https://github.com/PacktPublishing/Hands-On-RTOS-with-Microcontrollers-SecondEdition. The development-tools and how to use them are presented in Chapter 3, Introducing the Development Tools. In writing the book, the Windows 11 versions of the tools were used. The tools are also available for macOS and Linux, and those versions are expected to work adequately with the book, though we have not fully tested them. The example-programs can be downloaded from the book’s GitHub repository. This is also described in chapter 3.
+To run the example-programs, an STM32 Nucleo-F767ZI dev-board is needed. In the future, if additional hardware is supported, it will be described here in the book’s GitHub repository. The example-programs can be downloaded from here, in the book’s GitHub repository.. This is described in chapter 3.
   </details>
     
 
 
 <details> 
-  <summary><h2>Get to know Authors</h2></summary>
+  <summary><h2>Get to know the authors</h2></summary>
 
 _Jim Yuill_ Jim Yuill is a senior computer-systems engineer, with 30 years of experience. He has worked in operating-systems development, cyber-security R&D, network systems-programming, and university teaching. He has a PhD in computer science, with a thesis in cyber security, which is highly cited.
 
@@ -116,13 +118,14 @@ _Penn Linder_ Penn Linder is a Senior Electrical Engineer at IVEK Corporation, a
 
 </details>
 <details> 
-  <summary><h2>Other Related Books</h2></summary>
+  <summary><h2>Related books</h2></summary>
 <ul>
 
-  <li><a href="https://www.packtpub.com/en-us/product/c-in-embedded-systems-first-edition/9781835881149">C++ in Embedded Systems, First Edition</a></li>
+  <li><a href="https://www.packtpub.com/en-us/product/c-in-embedded-systems-first-edition-9781835881149">C++ in Embedded Systems, First Edition</a></li>
 
-  <li><a href="https://www.packtpub.com/en-us/product/mastering-embedded-linux-development-fourth-edition/9781803232591">Mastering Embedded Linux Development, Fourth Edition</a></li>
+  <li><a href="https://www.packtpub.com/en-us/product/mastering-embedded-linux-development-fourth-edition-9781803232591">Mastering Embedded Linux Development, Fourth Edition</a></li>
  
 </ul>
 
 </details>
+
