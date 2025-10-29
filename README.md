@@ -1,40 +1,53 @@
 <h1 align="center">
 Hands-On RTOS with Microcontrollers, Second Edition</h1>
+<p align="center">
+Create high-performance, real-time embedded systems using FreeRTOS, STM32 MCUs, and SEGGER debug tools
+</p>
+
 <p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/hands-on-rtos-with-microcontrollers-9781803243047"> Hands-On RTOS with Microcontrollers, Second Edition</a>, published by Packt.
 </p>
 
-<h2 align="center">
-Create high-performance, real-time embedded systems using FreeRTOS, STM32 MCUs, and SEGGER debug tools
-</h2>
 <p align="center">
-Jim Yuill, Penn Linder</p>
-
-<p align="center">
+<!-- These links don't work, so I commented them out: 
    <a href="https://packt.link/embeddedsystems" alt="Discord" title="Learn more on the Discord server"><img width="32px" src="https://cliply.co/wp-content/uploads/2021/08/372108630_DISCORD_LOGO_400.gif"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
   <a href="https://packt.link/free-ebook/9781803237725"><img width="32px" alt="Free PDF" title="Free PDF" src="https://cdn-icons-png.flaticon.com/512/4726/4726010.png"/></a>
  &#8287;&#8287;&#8287;&#8287;&#8287;
+ -->
   <a href="https://packt.link/gbp/9781803237725"><img width="32px" alt="Graphic Bundle" title="Graphic Bundle" src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
    <a href="https://www.amazon.com/Hands-RTOS-Microcontrollers-high-performance-real-time/dp/1803237724"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
 </p>
-<details open> 
+
+<h2>Installing the repo: how to choose the FreeRTOS version</h2>
+
+How to install the repo is described in the book, in chapter 3.<br>
+The file <a href="./SUPPORT.md">SUPPORT.md</a>
+has information on the FreeRTOS versions available, and how to choose one for installation.
+
+
+<details open>
   <summary><h2>About the book</summary>
-<a href="https://www.packtpub.com/product/unity-cookbook-fifth-edition/9781805123026">
+<a href="https://www.packtpub.com/en-us/product/hands-on-rtos-with-microcontrollers-9781803243047">
 <img src="https://content.packt.com/B18584/cover_image_small.jpg"  height="256px" align="right">
 </a>
 
-This updated edition of Hands-On RTOS with Microcontrollers is packed with cutting-edge content. It can help you expand your skills and stay ahead of the curve in embedded-systems development. It’s written by senior engineers with decades of experience in embedded systems and related technologies. The book covers the role of real-time OSs in today’s time-critical applications, and it covers FreeRTOS, including key capabilities and APIs. You’ll find a detailed overview of system design (FreeRTOS and its APIs, memory management);  hands-on system use; as well as the hardware platform (dev-board, MCU and debug-probe), and development tools (IDE, build system, and debugging tools).
+ This updated edition of *Hands-On RTOS with Microcontrollers* is packed with essential content.  It can help you expand your skills and stay ahead of the curve in embedded-systems development. It’s written by senior engineers with decades of experience in embedded systems and related technologies. The book covers the role of real-time OSs in today’s time-critical applications, and it covers FreeRTOS, including key capabilities and APIs. You’ll find detailed descriptions of system design,  hands-on system use, the hardware platform (dev-board, MCU, and debug-probe), and the development tools (IDE, build system, and debugging tools).
 
-This second edition teaches you how to implement over 20 real-world embedded applications with the latest FreeRTOS features and how to optimize your code with dynamic analysis. The chapters include example programs on GitHub with detailed instructions. You’ll create and install your own FreeRTOS system on the dev-board and set up an IDE project with debugging tools. With dozens of reference manuals listed, you’ll always have ample resources for system development.
+This second edition teaches you how to implement over 20 real-world embedded applications, using FreeRTOS's primary features. The chapters include example programs on GitHub, with detailed instructions. You’ll create and install your own FreeRTOS system on the dev-board (purchased separately), and set up an IDE project with debugging tools. 
 
-By the end of this book, you’ll have the hands-on skills to design, build, and optimize embedded applications using FreeRTOS, dev-boards, and modern debugging tools.</details>
-<details open> 
+An ST dev-board is used with the book, and it is purchased separately (STM32 Nucleo-F767ZI). (Though, the dev-board is not required to read and understand the book.)
+
+By the end of this book, you’ll have the hands-on skills to start designing, building, and optimizing embedded applications, using FreeRTOS, development boards, and debugging tools.
+
+</details>
+
+<details close> 
   <summary><h2>What you will learn</summary>
 <ul>
 
-<li>Understand RTOS use cases, and decide when (and when not) to use real-time OS</li>
+<li>Understand RTOS use cases, and decide when (and when not) to use a real-time OS</li>
 
 <li>Utilize the FreeRTOS scheduler to create, start, and monitor task states</li>
 
@@ -52,9 +65,8 @@ By the end of this book, you’ll have the hands-on skills to design, build, and
 
   </details>
 
-<details open> 
+<details close> 
   <summary><h2>Chapters</summary>
-     <img src="https://cliply.co/wp-content/uploads/2020/02/372002150_DOCUMENTS_400px.gif" alt="Unity Cookbook, Fifth Edition" height="556px" align="right">
 <ol>
 
   <li>Introducing Real-Time Systems</li>
@@ -98,13 +110,6 @@ By the end of this book, you’ll have the hands-on skills to design, build, and
 </ol>
 
 </details>
-
-
-<details open> 
-  <summary><h2>Requirements for this book</summary>
-To run the example-programs, an STM32 Nucleo-F767ZI dev-board is needed. In the future, if additional hardware is supported, it will be described here in the book’s GitHub repository. The example-programs can be downloaded from here, in the book’s GitHub repository.. This is described in chapter 3.
-  </details>
-    
 
 
 <details> 
