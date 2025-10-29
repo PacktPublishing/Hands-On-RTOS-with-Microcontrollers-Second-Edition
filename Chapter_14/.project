@@ -79,6 +79,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/BSP</locationURI>
 		</link>
 		<link>
+			<name>Config</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Config</locationURI>
+		</link>
+		<link>
 			<name>Drivers</name>
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers</locationURI>

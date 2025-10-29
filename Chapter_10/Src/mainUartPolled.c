@@ -51,9 +51,9 @@ int main(void)
     iterationsPerMilliSecond = lookBusyIterationRate();
 
     // Setup tasks, making sure they have been properly created before moving on
-    assert_param(xTaskCreate(polledUartReceive, "polledUartRx", STACK_SIZE, NULL, tskIDLE_PRIORITY + 2, NULL) == pdPASS);
-    assert_param(xTaskCreate(uartPrintOutTask, "uartPrintTask", STACK_SIZE, NULL, tskIDLE_PRIORITY + 3, NULL) == pdPASS);
-    assert_param(xTaskCreate(startUpTask, "startUpTask", STACK_SIZE, NULL, tskIDLE_PRIORITY + 4, NULL) == pdPASS);
+    assert_param(xTaskCreate(polledUartReceive, "polledUartRx", STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL) == pdPASS);
+    assert_param(xTaskCreate(uartPrintOutTask, "uartPrintTask", STACK_SIZE, NULL, tskIDLE_PRIORITY + 2, NULL) == pdPASS);
+    assert_param(xTaskCreate(startUpTask, "startUpTask", STACK_SIZE, NULL, tskIDLE_PRIORITY + 3, NULL) == pdPASS);
 
     // Create the queue.
     uart2_BytesReceived = xQueueCreate(10, sizeof(char));
