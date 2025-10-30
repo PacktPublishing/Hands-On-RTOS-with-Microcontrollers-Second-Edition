@@ -4,8 +4,8 @@ This repo, and how to install it, are described in the book, in chapter 3.<br>
 Additional information is provided here on how to select the FreeRTOS version.
 
 The repo has two branches, and each contains all of the book's example-programs.<br>
-The branch **main** uses FreeRTOS version 10.2.1 (released in 2019).<br>
-The branch **FreeRTOSv11-1-0** uses FreeRTOS version 11.1.0 (released in 2025).
+The branch **main** uses FreeRTOS version 10.2.1.<br>
+The branch **FreeRTOSv11-1-0** uses FreeRTOS version 11.1.0.
 
 We recommend readers use the branch *main*, for these reasons:
 * *main* was used in developing the book.
