@@ -21,7 +21,8 @@ Create high-performance, real-time embedded systems using FreeRTOS, STM32 MCUs, 
 </p>
 
 <h2>Installing the repo: how to choose the FreeRTOS version</h2>
-
+<br>
+These tools should be installed in the order presented here. J-Link should be installed first, as it's needed to use both Ozone and SystemView. Ozone should be installed next, as it's needed to use SystemView. Finally, SystemView can be installed.<br><br>
 How to install the repo is described in the book, in chapter 3.<br>
 The file <a href="./SUPPORT.md">SUPPORT.md</a>
 has information on the FreeRTOS versions available, and how to choose one for installation.
@@ -133,6 +134,7 @@ _Penn Linder_ Penn Linder is a Senior Electrical Engineer at IVEK Corporation, a
 </ul>
 
 </details>
+
 
 
 
